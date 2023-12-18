@@ -2,65 +2,67 @@
 <html>
     <head><!--the outermost HTML element-->
         <title>First webpage</title>
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body><!--visible content-->
-        <div><!--introduction-->
-            <img src="https://via.placeholder.com/150" />
-            <h1>Nadhira Shah</h1>
-            <h3>Aspiring Web Developer</h3>
-            <p>{{ Pause and ponder }}</p>
-        </div>
-        <div><!--about me-->
-            <div>
-                <h3>I am</h3>
-                <ul>
-                    <li>A reader</li>
-                    <li>A hobby cook</li>
-                    <li>A learner</li>
-                </ul>
+        <div class="container">
+            <div class="intro"><!--introduction-->
+                <img src="https://via.placeholder.com/150" />
+                <h1>Nadhira Shah</h1>
+                <h3>Aspiring Web Developer</h3>
+                <p class="quote">{{ Pause and ponder }}</p>
             </div>
-            <div>
-                <h3>I like to</h3>
-                <ul>
-                    <li>Look for fashion inspo</li>
-                    <li>Drink coffee</li>
-                    <li>Take pictures</li>
-                </ul>
+            <div class="about-grid"><!--about me-->
+                <div class="i-am">
+                    <h3>I am</h3>
+                    <ul class="about-list">
+                        <li>A reader</li>
+                        <li>A hobby cook</li>
+                        <li>A learner</li>
+                    </ul>
+                </div>
+                <div class="i-like">
+                    <h3>I like to</h3>
+                    <ul class="about-list">
+                        <li>Look for fashion inspo</li>
+                        <li>Drink coffee</li>
+                        <li>Take pictures</li>
+                    </ul>
+                </div>
             </div>
-        </div>
-        <div><!--portfolio-->
-            <h3>My Projects</h3>
-            <div>
-                <img src="https://via.placeholder.com/300" />
-                <img src="https://via.placeholder.com/300" />
+            <div class="project-heading"><!--portfolio-->
+                <h3>My Projects</h3>
+                <div class="project-grid">
+                    <img class="project-image" src="https://via.placeholder.com/300" />
+                    <img class="project-image" src="https://via.placeholder.com/300" />
+                    <img class="project-image" src="https://via.placeholder.com/300" />
+                    <img class="project-image" src="https://via.placeholder.com/300" />
+                </div>
             </div>
-            <div>
-                <img src="https://via.placeholder.com/300" />
-                <img src="https://via.placeholder.com/300" />
-            </div>
-        </div>
-        <div><!--links and footer-->
-            <div>
-                <h3>Links</h3><!--external links-->
-                <ul>
-                    <li>
-                        <a href="https://github.com/">Github</a>
-                    </li>
-                    <li>
-                        <a href="https://www.linkedin.com/">Linkedin</a>
-                    </li>
-                </ul>
-            </div>
-            <div><!--form to contact me-->
-                <form action="#"><!--# means nothing is supposed to happen-->
-                    <label for="email">
-                        Email: <input type="email" id="email" placeholder="Enter your email" />
-                    </label>
-                    <label for="message">
-                        Message: <textarea id="message">Your Message</textarea>
-                    </label>
-                    <input type="submit" valid="Send Message" /><!--button submits the form when clicked-->
-                </form>
+            <div class="links-and-contact"><!--links and footer-->
+                <div class="links">
+                    <h3>Links</h3><!--external links-->
+                    <ul class="links-list">
+                        <li>
+                            <a href="https://github.com/">Github</a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/">LinkedIn</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="form"><!--form to contact me-->
+                    <form action="#"><!--# means nothing is supposed to happen-->
+                        <label for="email">
+                            Email: <input type="email" id="email" placeholder="Enter your email" />
+                        </label>
+                        <label for="message">
+                            Message: <textarea id="message">Your Message</textarea>
+                        </label>
+                        <input type="submit" valid="Send Message" /><!--button submits the form when clicked-->
+                    </form>
+                </div>
             </div>
         </div>
     </body>
