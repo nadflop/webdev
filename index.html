@@ -78,18 +78,19 @@
                     <form action="#"><!--# means nothing is supposed to happen-->
                         <label for="email">
                             <h4>Email</h4>
-                            <input type="email" id="email" placeholder="Enter your email" />
+                            <input type="email" id="email" placeholder="Enter your email" autocomplete="off"/>
                         </label>
                         <label for="message">
                             <h4>Message</h4>
-                            <textarea id="message">Your Message</textarea>
+                            <textarea id="message" placeholder="Your Message"></textarea>
                         </label>
                         <div class="submit-button-wrapper">
-                            <input type="submit" valid="Send Message" /><!--button submits the form when clicked-->
+                            <input type="submit" value="Send Message" id="submit-button" /><!--button submits the form when clicked-->
                         </div>
                     </form>
                 </div>
             </div>
         </div>
+        <script src="script.js"></script>
     </body>
 </html>
