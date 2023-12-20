@@ -1,6 +1,30 @@
+body {
+    font-family: 'Noto Sans', sans-serif;
+    background: #B1D0E0;
+    color: #1A374D;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Roboto Mono', monospace;
+}
+
+.quote {
+    font-style: oblique;
+}
+
 .container {
     max-width: 840px;
     margin: 0 auto;
+}
+
+.container > div {
+    margin: 20px auto;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
 }
 
 .intro {
@@ -9,12 +33,24 @@
 
 .about-grid {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: repeat(2, 1fr);
 }
 @media (max-width: 480px) {
     .about-grid {
         grid-template-columns: 100%;
     }
+}
+
+.profile-picture {
+    border-radius: 50%; 
+    width: 150px;
+    height: 150px;
+    box-shadow: 0 4px 6px 0 rgba(34, 60, 80, .16); 
+    transition: all ease-in-out .2s; 
+}
+
+.profile-picture:hover { 
+    box-shadow: 0 8px 12px 0 rgba(34, 60, 80, .16);
 }
 
 .i-am, .i-like {
@@ -33,7 +69,7 @@
 
 .project-grid {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: repeat(2, 1fr);
 }
 @media (max-width: 480px) {
     .project-grid {
@@ -42,8 +78,35 @@
 }
 
 .project-image {
+    border-radius: 5px;
+    box-shadow: 0 4px 6px 0 rgba(34, 60, 80, .16);
+    transition: all ease-in-out .2s;
+}
+
+.project-image:hover{ /*defines what happens when you hover it*/
+    filter: brightness(.75);
+    box-shadow: 0 8px 12px 0 rgba(34, 60, 80, .16);
+}
+
+.project-image-wrapper {
     justify-self: center;
     padding: 4%;
+    position: relative;
+}
+
+.project-image-wrapper > h4 { /*selects h4 that is inside project-image-wrapper*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    visibility: hidden;
+    transform: translate(-50%, -50%);
+    color: white;
+    z-index: 2;
+    transition: all ease-in-out .2s;
+}
+
+.project-image-wrapper:hover > h4 { 
+    visibility: visible;
 }
 
 .links-and-contact {
@@ -64,6 +127,22 @@
     padding: 0;
 }
 
-.quote {
-    font-style: italic;
+form {
+    width: 250px;
+    margin: 0 auto;
+}
+
+form input, textarea {
+    padding: 5px;
+    border-radius: 5px;
+    width: 240px;
+}
+
+form input[type="submit"] { /*to select input field inside a form*/
+    width: 250px;
+    background-color: #6998AB;
+}
+
+.submit-button-wrapper {
+    margin: 20px 0;
 }
